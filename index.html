@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Calendar</title>
+		<style>
+			body {
+				padding: 2em;
+				background: #fafafa;
+				color: #666;
+				font-size: 14px;
+				font-family: "Helvetica", sans-serif;
+				line-height: 135%;
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.day {
+				width: 100px;
+				float: left;
+				padding-top: 75px;
+			}
+
+			.day h3 {
+				margin-top: -75px;
+			}
+
+			.events {
+                position: relative;
+				border-top: 1px solid #aaa;
+				border-bottom: 1px solid #aaa;
+				height: 500px;
+			}
+
+            .event {
+                position: absolute;
+                width: 100px;
+                padding: 0 0.3em;
+                box-sizing: border-box;
+                color: #355718;
+                border-left: 3px solid #69ab30;
+                background: rgba(162, 199, 74, 0.40);
+                border-radius: 10px;
+            }
+
+            .event h4 {
+                margin: 0;
+                font-size: 10px;
+                overflow: hidden;
+            }
+		</style>
+	</head>
+	<body>
+		<h1>Plans</h1>
+		<div id="calendar">
+			<ul class="days">
+			</ul> <!-- .days -->
+		</div>
+		<script src="$.js"></script>
+		<script src="_.js"></script>
+		<script src="backbone.js"></script>
+		<script src="handlebars.js"></script>
+		<script src="templates.js"></script>
+		<script src="events.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
+

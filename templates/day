@@ -1,0 +1,3 @@
+<h3>{{ date }}</h3>
+<ul class="events">
+</ul>
