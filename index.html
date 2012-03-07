@@ -19,21 +19,46 @@
 				list-style: none;
 			}
 
+			#calendar {
+				float: left;
+				position: relative;
+				border-top: 1px solid #ddd;
+				border-left: 1px solid #ddd;
+			}
+
+			.hours {
+				position: absolute;
+				top: 30px;
+				width: 100%;
+				height: 500px;
+				border-top: 1px solid #ddd;
+			}
+
+			.hours .hour {
+				position: relative;
+				top: -1px;
+				border-bottom: 1px solid #ddd;
+				height: 19px;
+			}
+
 			.day {
 				width: 100px;
 				float: left;
-				padding-top: 75px;
+				border-right: 1px solid #ddd;
 			}
 
 			.day h3 {
-				margin-top: -75px;
+				margin: 0;
+				height: 20px;
+				padding: 5px;
+				font-size: 1em;
+				text-align: center;
+				background: #f8f8f8;
 			}
 
 			.events {
 				position: relative;
-				border-top: 1px solid #aaa;
-				border-bottom: 1px solid #aaa;
-				height: 500px;
+				height: 480px;
 			}
 
 			.event {
@@ -61,6 +86,32 @@
 	<body>
 		<h1>Plans</h1>
 		<div id="calendar">
+			<div class="hours">
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+				<div class="hour"></div>
+			</div> <!-- .hours -->
 			<ul class="days">
 			</ul> <!-- .days -->
 		</div>
