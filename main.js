@@ -202,8 +202,8 @@ $(function() {
 	window.Days = new DayList;
 	window.App = new Calendar;
 
-    Days.bind('add', App.addDay, App);
-    Events.bind('add', App.addEvent, App);
+	Days.bind('add', App.addDay, App);
+	Events.bind('add', App.addEvent, App);
 
 	var startDate = new Date(2012, 2, 13);
 	var dayCount = 3;
