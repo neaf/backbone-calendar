@@ -93,7 +93,22 @@ $(function() {
 			var content = this.template(this.model.toJSON());
 			this.$el.html(content);
 			this.position();
+			this.bindHover();
 			return this;
+		},
+		bindHover: function() {
+			this.$el.on('mouseenter', _.bind(this.highlightMatching, this));
+			this.$el.on('mouseleave', _.bind(this.unhighlightMatching, this));
+		},
+		highlightMatching: function() {
+			_.each(App.eventViews[this.model.cid], function(view) {
+				view.$el.addClass('hover');
+			});
+		},
+		unhighlightMatching: function() {
+			_.each(App.eventViews[this.model.cid], function(view) {
+				view.$el.removeClass('hover');
+			});
 		},
 		remove: function() {
 			this.$el.remove();
@@ -173,6 +188,7 @@ $(function() {
 		initialize: function() {
 			this.daysContainer = this.$('.days');
 			this.dayViews = [];
+			this.eventViews = {};
 		},
 		addDay: function(day) {
 			var view = new DayView({ model: day });
@@ -189,6 +205,7 @@ $(function() {
 				eventViews.push(eventView);
 				view.reindentEvents();
 			});
+			App.eventViews[event.cid] = eventViews;
 		},
 		dayViewsForEvent: function(event) {
 			return _.filter(this.dayViews, function(view) {
